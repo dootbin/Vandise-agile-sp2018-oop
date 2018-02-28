@@ -1,0 +1,4 @@
+
+public enum ShipType {
+	PATROL, DESTROYER, SUBMARINE, BATTLESHIP, CARRIER
+}
