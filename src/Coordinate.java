@@ -15,6 +15,7 @@ public class Coordinate extends CoordinateSubject {
 	public String call() throws Exception {
 		if (!this.called) {
 			this.notifyObserver();
+			called();
 			return "Miss";
 		} else {
 			throw new Exception("Coordinate already called");
@@ -27,7 +28,7 @@ public class Coordinate extends CoordinateSubject {
 	//
 	@Override
 	public void attach(Ship observer) {
-		// TODO
+		this.observer = observer;
 	}
 
 	// TODO
