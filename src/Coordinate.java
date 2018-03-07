@@ -9,7 +9,7 @@ public class Coordinate extends CoordinateSubject {
 	}
 
 	// TODO
-	// call the coordinate, check if the shit was hit, missed, or sunk
+	// call the coordinate, check if the ship was hit, missed, or sunk
 	// read about the observer pattern
 	//
 	public String call() throws Exception {
