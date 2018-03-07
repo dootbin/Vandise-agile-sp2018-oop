@@ -8,8 +8,12 @@ public abstract class CoordinateSubject {
 	// update the observer
 	// read about the observer pattern
 	//
-	public void notifyObserver() throws Exception {
-
+	public void notifyObserver() {
+		try {
+			this.observer.hit();
+		} catch (Exception e) {
+			/* fixme */
+		}
 	}
 
 	public Ship getObservable() {
