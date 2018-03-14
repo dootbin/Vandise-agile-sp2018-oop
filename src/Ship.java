@@ -7,12 +7,8 @@ public class Ship implements Observable {
 		this.sunk = false;
 	}
 
-	// TODO
-	// See unit tests for what needs to be done here
-	// in the observer pattern
-	//
 	public void update() throws Exception {
-		this.life = 2;
+		this.hit();
 	}
 
 	public boolean isSunk() {
@@ -23,9 +19,6 @@ public class Ship implements Observable {
 		return this.life;
 	}
 
-	// TODO
-	//	a peice of logic is missing here
-	//
 	public void hit() throws Exception {
 		if (!this.sunk) {
 			this.life -= 1;

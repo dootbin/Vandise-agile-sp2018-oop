@@ -24,7 +24,18 @@ public class Board {
 	}
 
 	public void addShip(int x, int y, ShipType type) throws Exception {
-		shipCount ++;
+		
+		Ship ship = ShipFactory.create(type);
+		
+		int size = ship.getLife();
+		for (int i = 0; i < size; i++) {
+			int coordinate = ( y - i ) * this.size + x;
+			if (coordinate < 0 ) {
+				throw new Exception("Invalid coordinate");
+			}
+			(this.coordinateVector[coordinate]).attach(ship);
+		}
+		this.shipCount += 1;
 	}
 
 	public int getShipCount() {
